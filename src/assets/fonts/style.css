@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Code Pro';
+    src: local('Code Pro Bold'), local('Code-Pro-Bold'),
+        url('Code-Pro-Bold.woff2') format('woff2'),
+        url('Code-Pro-Bold.woff') format('woff'),
+        url('Code-Pro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

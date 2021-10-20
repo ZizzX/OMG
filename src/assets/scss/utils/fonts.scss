@@ -1,0 +1,11 @@
+@import "mixins";
+
+@font-face {
+  font-family: 'Code Pro';
+  src: local('Code Pro Bold'), local('Code-Pro-Bold'),
+  url('/assets/fonts/Code-Pro-Bold.woff2') format("woff2"),
+  url('/assets/fonts/Code-Pro-Bold.woff') format("woff"),
+  url('/assets/fonts/Code-Pro-Bold.ttf') format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
