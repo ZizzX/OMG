@@ -1,5 +1,5 @@
 @function rem($px) {
-  @return ($px / 16) +rem;
+  @return ($px / 18) +rem;
 }
 
 @function calcsum($x, $y) {

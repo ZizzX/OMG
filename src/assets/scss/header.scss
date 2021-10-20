@@ -1,11 +1,18 @@
 @import "utils/_smart-grid";
+@import "utils/mixins";
 
 .header {
   position: relative;
   height: 660px;
   box-shadow: -20px 4px 40px rgba(0, 0, 0, 0.25);
-  background: rgb(30,146,112);
-  background: radial-gradient(circle, rgba(30,146,112,1) 0%, rgba(149,199,192,1) 0%, rgba(30,146,126,1) 31%);
+  background: rgb(30, 146, 112);
+  background: radial-gradient(circle, rgba(30, 146, 112, 1) 0%, rgba(149, 199, 192, 1) 0%, rgba(30, 146, 126, 1) 31%);
+
+  .wrapper {
+    margin-left: rem(175);
+    z-index: 10;
+    position: inherit;
+  }
 
   &-img {
     position: absolute;
@@ -13,6 +20,96 @@
     left: 0;
     right: 0;
     bottom: 10%;
-    background: url("/assets/img/header/1.png")50% 50%/contain no-repeat;
+    background: url("/assets/img/header/1.png") 50% 50%/contain no-repeat;
+  }
+
+  &-top {
+    display: flex;
+  }
+
+  .logo {
+    width: 200px;
+    height: 171px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -20px 4px 40px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    z-index: 20;
+  }
+  .logo-wrapper {
+    position: relative;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 161px;
+    height: 161px;
+    border-radius: 100%;
+    left: -20%;
+    bottom: -20%;
+    display: block;
+
+    z-index: 1;
+
+    background: #EA5931;
+  }
+
+  &__title {
+    margin-top: rem(75);
+    max-width: 425px;
+    line-height: 1.2;
+
+    span {
+      color: #5DCCB8;
+    }
+  }
+
+  .subtitle {
+    margin-top: rem(36);
+    font-size: rem(24);
+
+    &-with-badge {
+      width: 684.5px;
+      height: 49px;
+      background: #1E927E;
+      display: inline-flex;
+      align-items: center;
+
+      color: #5DCCB8;
+
+      -webkit-clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+    }
+  }
+
+  &__btn button {
+    background: #EA5931;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+
+    padding: 12px 25px;
+    margin-top: rem(30);
+
+    font-size: rem(20);
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+}
+
+.header-contacts {
+  margin: rem(50) 0 0 rem(66);
+  &__item {
+    margin: 0 0 rem(16) 0;
+  }
+  &__item span {
+    display: inline-flex;
+    margin: 0 0 0 rem(32);
+  }
+
+  .tel {
+    font-size: rem(24);
   }
 }

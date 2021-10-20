@@ -2,12 +2,16 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
- //@import "utils/_reset";
+ @import "utils/_reset";
 @import "utils/_normalize";
 @import "utils/_smart-grid";
 
 .container {
   @include container;
+}
+
+.title {
+  font-size: rem(36);
 }
 
 @import "header";
