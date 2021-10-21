@@ -1,7 +1,8 @@
 import {tns} from "/node_modules/tiny-slider/src/tiny-slider";
 
-const dots = document.querySelectorAll(".dot"),
-  img = document.querySelectorAll(".slider-img");
+const dots = document.querySelectorAll(".dot");
+let index = 0;
+
 const slider = tns({
   container: "#mySlider",
   items: 1,
@@ -15,8 +16,6 @@ const slider = tns({
   nav: dots
 });
 
-slider.getInfo();
-
 const addActiveClass = (elem, activeClass) => {
   elem.classList.add(activeClass);
 };
@@ -24,25 +23,27 @@ const removeActiveClass = (elem, activeClass) => {
   elem.forEach(d => d.classList.remove(activeClass));
 };
 
-[...dots].forEach((dot, index) => {
+const changeActiveClass = (elem, className, elemArr) => {
+  removeActiveClass(elemArr, className);
+  addActiveClass(elem, className);
+};
+
+[...dots].forEach((dot, i) => {
   dot.addEventListener("click", function (e) {
     const target = e.target;
-    removeActiveClass(dots, "active");
-    addActiveClass(target, "active");
+    changeActiveClass(target, "active", dots);
 
-    slider.goTo(index);
+    slider.goTo(i);
+    index = i;
   });
 });
-//
-setInterval(() => {
-  let current = 0;
-  removeActiveClass(dots, "active");
-  addActiveClass(dots[current], "active");
-  if (current >= dots.length - 1) {
-    current = 0;
-  }
-  current++;
 
-  slider.goTo(current);
-}, 1000000);
+setInterval(() => {
+  if (index >= dots.length) {
+    index = 0;
+  }
+  slider.goTo(index);
+  changeActiveClass(dots[index], "active", dots);
+  index++;
+}, 3000);
 
