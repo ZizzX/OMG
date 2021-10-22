@@ -45,5 +45,5 @@ setInterval(() => {
   slider.goTo(index);
   changeActiveClass(dots[index], "active", dots);
   index++;
-}, 3000);
+}, 30000);
 

@@ -2,6 +2,10 @@
   @return ($px / 18) +rem;
 }
 
+@function em($px, $cur) {
+  @return ($px / $cur) +em;
+}
+
 @function calcsum($x, $y) {
   @return ($x + $y) + px;
 }
