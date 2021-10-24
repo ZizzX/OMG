@@ -1,0 +1,132 @@
+@import "utils/_smart-grid";
+@import "utils/mixins";
+@import "utils/vars";
+
+.payment {
+	background: $yellow-color;
+
+	&-wrapper {
+		padding: 0 15px;
+	}
+
+	.row {
+		justify-content: center;
+		gap: 60px;
+		flex-wrap: nowrap;
+	}
+
+	&__card {
+		padding: 69px 70px 76px;
+		margin-bottom: 160px;
+		background: $primary-color;
+		text-align: right;
+	}
+
+	&__conditions {
+		text-align: left;
+		margin-top: 160px;
+		padding: 82px 93px 96px;
+		background: $default-color;
+
+		color: #000000;
+	}
+
+	&__img {
+		width: 32px;
+		height: 32px;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		max-width: 337px;
+		min-width: 290px;
+	}
+
+	&__text span {
+		display: inline-block;
+		color: $yellow-color;
+	}
+
+	&__master-exit {
+		font-size: 18px;
+		margin-bottom: 80px;
+
+		span {
+			margin-top: 11px;
+			font-size: 32px;
+		}
+	}
+
+	&__repair {
+		font-size: 28px;
+		span {
+			margin-top: 60px;
+			font-size: 48px;
+		}
+	}
+
+	.title {
+		margin-bottom: 45px;
+	}
+
+	.text {
+		font-size: calc(16px + 0 * (100vw - 375px) / (1440 - 375));
+		width: 100%;
+		max-width: 385px;
+		min-width: 280px;
+		line-height: 1.2;
+
+		&:not(:last-of-type) {
+			margin-bottom: 23px;
+		}
+	}
+
+	@media (max-width: 992px) {
+		&-wrapper {
+			padding: 0;
+		}
+		.row {
+			flex-wrap: wrap;
+			flex-direction: column;
+			gap: 77px;
+		}
+		&__card,
+		&__conditions {
+			margin: 0;
+		}
+
+		&__card {
+			align-self: self-start;
+			margin-right: 22px;
+		}
+		&__conditions {
+			align-self: self-end;
+			margin-left: 22px;
+		}
+	}
+
+	@media (max-width: $tableWidth) {
+		&__card {
+			padding: 59px 31px 100px 23px;
+		}
+		&__conditions {
+			padding: 100px 22px 109px 37px;
+		}
+	}
+	
+	@media (max-width: $smTableWidth) {
+		&__img {
+			margin-bottom: 28px;
+		}
+
+		&__master-exit {
+			font-size: 24px;
+		}
+		&__repair {
+			font-size: 32px;
+			span {
+				margin-top: 40px;
+			}
+		}
+	}
+}

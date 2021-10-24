@@ -9,3 +9,12 @@
   font-style: normal;
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'CandaraLight';
+  font-weight: 300;
+
+  src:    url('https://nomail.com.ua/files/eot/8daa0f2304ee100fe3888d5b7307e64f.eot?#iefix') format('embedded-opentype'),
+  url('https://nomail.com.ua/files/woff/8daa0f2304ee100fe3888d5b7307e64f.woff') format('woff'),
+  url('https://nomail.com.ua/files/woff2/8daa0f2304ee100fe3888d5b7307e64f.woff2') format('woff2');
+}
