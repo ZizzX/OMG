@@ -1,27 +1,34 @@
 // Font
-$mainFont                : 'Code Pro', Helvetica, Arial, sans-serif;
+$mainFont       : 'Code Pro', Helvetica, Arial, sans-serif;
 
 // Size
-$mainFontColor           : #101010;
-$mainFontSize            : 18px;
-$mainFontWeight          : 700;
-$mainLineHeight          : 1.4;
+$mainFontColor  : #101010;
+$mainFontSize   : 18px;
+$mainFontWeight : 700;
+$mainLineHeight : 1.4;
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 1024px;
-$tableWidth              : 768px;
-$smTableWidth            : 640px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$desktopWidth   : 1280px;
+$smDesktopWidth : 1024px;
+$tableWidth     : 768px;
+$smTableWidth   : 640px;
+$phoneWidth     : 480px;
+$smPhoneWidth   : 320px;
 
 // Main color
-$default-color           : #ffffff;
-$primary-color           : #43AE9B;
-$orange-color            : #EA5931;
-$yellow-color            : #EBBD1F;
+$default-color  : #FFF;
+$primary-color  : #43AE9B;
+$orange-color   : #EA5931;
+$yellow-color   : #EBBD1F;
 
 // Neutral Color
-$ellipse-color        : #5DCCB8;
+$ellipse-color  : #5DCCB8;
 
 // Border Color
-$border-base             : #DCDFE6;
+$border-base    : #DCDFE6;
+
+// Brands Color
+$brand-red      : #C92625;
+$brand-green    : #1E927E;
+$brand-orange   : #EE5930;
+$brand-brown    : #94880A;
+$brand-blue     : #5DCCB8;
