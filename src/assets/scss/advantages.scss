@@ -10,7 +10,7 @@
 
 	.column__img svg path,
 	.column::after {
-		//transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
 	}
 
 	&::after {

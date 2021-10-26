@@ -8,9 +8,7 @@ const slider = tns({
   items: 1,
   slideBy: "page",
   controls: false,
-  animateIn: "jello",
-  animateOut: "rollOut",
-  "speed": 300,
+  "speed": 500,
   "swipeAngle": false,
   "mode": "gallery",
   nav: dots
@@ -45,5 +43,5 @@ setInterval(() => {
   slider.goTo(index);
   changeActiveClass(dots[index], "active", dots);
   index++;
-}, 30000);
+}, 3000);
 

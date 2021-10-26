@@ -102,6 +102,7 @@
 
   .prev-button,
   .next-button {
+    cursor: pointer;
     position: absolute;
     z-index: 10;
   }
