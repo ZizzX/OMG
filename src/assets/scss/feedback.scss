@@ -4,8 +4,19 @@
 
 .feedback {
   background: #1E927E;
-  padding: 100px 108px 88px;
-  
+  padding: 100px clamp(6%, 10vw, 108px) 88px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 68px clamp(6%, 2vw, 108px) 57px;
+  }
+
+  .tns-ovh {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
   .title {
     text-align: center;
     margin-bottom: 100px;
@@ -13,6 +24,7 @@
 
   &__wrapper {
     justify-content: center;
+    flex-wrap: nowrap;
   }
 
   &__item {
@@ -25,26 +37,34 @@
 
     padding: 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
 
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background: url("/assets/img/feedback/vector1.svg")center no-repeat;
-    }
-    &:nth-of-type(2)::after {
-      background: url("/assets/img/feedback/vector2.svg")center no-repeat;
-    }
-    &:nth-of-type(3)::after {
-      background: url("/assets/img/feedback/vector3.svg")center no-repeat;
+    &.tns-slide-active {
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      &:nth-of-type(1)::after {
+        background: url("/assets/img/feedback/vector1.svg") center no-repeat;
+      }
+
+      &:nth-of-type(2)::after {
+        background: url("/assets/img/feedback/vector2.svg") center no-repeat;
+      }
+
+      &:nth-of-type(3)::after {
+        background: url("/assets/img/feedback/vector3.svg") center no-repeat;
+      }
     }
   }
 
   &__img {
     position: absolute;
+    z-index: 5;
     top: -26px;
     right: 26px;
 
@@ -67,5 +87,28 @@
 
   &__stars {
     margin-bottom: 25px;
+  }
+  &__star.active path {
+    fill: $yellow-color;
+  }
+
+
+  .navContainer {
+    //position: relative;
+    position: inherit;
+    height: 100%;
+    width: 100%;
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    z-index: 10;
+  }
+  .prev-button {
+    left: -20px;
+  }
+  .next-button {
+    right: -20px;
   }
 }
