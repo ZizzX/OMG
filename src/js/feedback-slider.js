@@ -1,11 +1,11 @@
 import { tns } from "/node_modules/tiny-slider/src/tiny-slider";
 
-const prevButton = document.querySelector(".prev-button"),
-  nextButton = document.querySelector(".next-button"),
-  sliderWrapper = document.querySelector("#feedbackSlider");
+const prevButton = document.querySelector( ".prev-button" ),
+  nextButton = document.querySelector( ".next-button" ),
+  sliderWrapper = document.querySelector( "#feedbackSlider" );
 // feedbackStars = document.querySelectorAll(".feedback__star");
 
-const feedbackSlider = tns({
+const feedbackSlider = tns( {
   container: "#feedbackSlider",
   items: 3,
   autoplay: true,
@@ -38,13 +38,13 @@ const feedbackSlider = tns({
       items: 1
     }
   }
-});
+} );
 
-const sliderHeight = +getComputedStyle(sliderWrapper).height.slice(-0, -2);
+const sliderHeight = +getComputedStyle( sliderWrapper ).height.slice( -0, -2 );
 
-function setPositionForBtn(btnName) {
-  btnName.style.cssText = `top: ${sliderHeight / 2}px`;
+function setPositionForBtn( btnName ) {
+  btnName.style.cssText = `top: ${ sliderHeight / 2 }px`;
 }
 
-setPositionForBtn(prevButton);
-setPositionForBtn(nextButton);
+setPositionForBtn( prevButton );
+setPositionForBtn( nextButton );
