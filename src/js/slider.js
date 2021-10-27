@@ -58,4 +58,4 @@ setInterval( () => {
   sliderBottom.goTo( index );
   changeActiveClass( dots[ index ], "active", dots );
   index++;
-}, 300000 );
+}, 3000 );

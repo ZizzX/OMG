@@ -54,14 +54,19 @@
 	}
 
 	&__item {
-		position  : relative;
+		position   : relative;
 
-		border    : 1px solid #00B09C;
-		max-width : 408px;
-		width     : 100%;
-		min-width : 330px;
+		border     : 1px solid #00B09C;
+		max-width  : 408px;
+		width      : 100%;
+		min-width  : 330px;
+		transition : border .3s ease-in-out;
+		cursor : pointer;
+		padding    : 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
 
-		padding   : 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
+		&:hover {
+			border : 1px solid #EBBD1F
+		}
 
 		&.tns-slide-active {
 			&::after {
@@ -88,8 +93,8 @@
 			}
 
 			&:nth-of-type(2n + 1) .feedback__img::before {
-				top : 63px;
-				right  : -5px;
+				top   : 63px;
+				right : -5px;
 			}
 
 			&:nth-of-type(3)::after {
