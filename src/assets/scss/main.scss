@@ -52,9 +52,9 @@
 }
 
 .dots {
-	display : flex;
-	margin-right: rem(60);
-	gap: rem(15);
+	display      : flex;
+	margin-right : rem(60);
+	gap          : rem(15);
 
 	.dot {
 		display          : inline-block;
@@ -70,15 +70,52 @@
 		}
 	}
 
-	.active {
+	.tns-nav-active {
 		background : $orange-color;
 	}
 }
 
 #mySlider2 {
-	display : none;
+	display  : none;
+	position : relative;
+	top      : -20px;
 	@media (max-width : 900px) {
 		display : inline-block;
+	}
+
+	& > .tns-item {
+		margin : 0 -5px 0 0;
+	}
+}
+
+#mySlider2-mw {
+	position : relative;
+
+	.slider-img {
+		position : relative;
+		&::before {
+			display : none;
+		}
+
+		@media (max-width: 635px) {
+			&::before {
+				display: block;
+				position   : absolute;
+				content    : "";
+				width      : 375px;
+				height     : 350px;
+				background : $orange-color;
+				top        : -18%;
+				left       : -8vw;
+				transform  : rotate(123deg);
+				box-shadow :inset 0px 4px 40px rgba(0, 0, 0, 0.3);
+			}
+		}
+		@media (max-width: 480px) {
+			&::before {
+				left       : 1vw;
+			}
+		}
 	}
 }
 
@@ -95,8 +132,8 @@
 	}
 
 	.dots-2 {
-		width : 80%;
-		max-width: 350px;
+		width             : 80%;
+		max-width         : 350px;
 		position          : absolute;
 		bottom            : 45px;
 		left              : 0;
