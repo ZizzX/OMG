@@ -16,6 +16,7 @@ const slider = tns( {
   autoplay: true,
   animateIn: "zoom-in",
   animateOut: "fade-out",
+  center: true,
 } );
 
 const sliderBottom = tns( {
@@ -26,7 +27,6 @@ const sliderBottom = tns( {
   speed: 300,
   swipeAngle: true,
   touch: false,
-  mode: "carousel",
   navContainer: ".dots-2",
   fixedWidth: 950,
   autoHeight: true,

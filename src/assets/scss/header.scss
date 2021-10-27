@@ -169,7 +169,7 @@
 			-webkit-clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 			clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 
-			@media (max-width: 900px) {
+			@media (max-width: 855px) {
 				background: transparent;
 				clip-path: none;
 				margin-top: 30px;
@@ -215,7 +215,7 @@
 		@media (max-width: 925px) {
 			clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
 		}
-		@media (max-width: 900px) {
+		@media (max-width: 855px) {
 			display: none;
 		}
 	}
@@ -224,7 +224,7 @@
 	.dots-1 {
 		padding : 0 0 0 em(135, 24);
 		font-size: calc(0px + 24 * (100vw - 375px) / (1440 - 375));
-		@media (max-width: 900px) {
+		@media (max-width: 855px) {
 			display: none;
 		}
 	}
