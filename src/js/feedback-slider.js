@@ -1,4 +1,4 @@
-import {tns} from "/node_modules/tiny-slider/src/tiny-slider";
+import { tns } from "/node_modules/tiny-slider/src/tiny-slider";
 
 const prevButton = document.querySelector(".prev-button"),
   nextButton = document.querySelector(".next-button"),
@@ -43,7 +43,7 @@ const feedbackSlider = tns({
 const sliderHeight = +getComputedStyle(sliderWrapper).height.slice(-0, -2);
 
 function setPositionForBtn(btnName) {
-  btnName.style.cssText = `top: ${Math.floor(sliderHeight) / 2}px`;
+  btnName.style.cssText = `top: ${sliderHeight / 2}px`;
 }
 
 setPositionForBtn(prevButton);

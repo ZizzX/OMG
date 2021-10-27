@@ -90,14 +90,17 @@
 
 #mySlider2-mw {
 	position : relative;
-
+	background : $orange-color;
 	.slider-img {
 		position : relative;
-		&::before {
-			display : none;
+		@media (max-width: 635px) {
+			-webkit-clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 62%, 48% 0);
+			clip-path: polygon(100% 0, 100% 49%, 100% 100%, 0 100%, 0 62%, 48% 0);
+			box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.3);
 		}
 
-		@media (max-width: 635px) {
+
+	/*	@media (max-width: 635px) {
 			&::before {
 				display: block;
 				position   : absolute;
@@ -115,7 +118,7 @@
 			&::before {
 				left       : 1vw;
 			}
-		}
+		}*/
 	}
 }
 
