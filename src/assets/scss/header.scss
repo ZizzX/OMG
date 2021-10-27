@@ -169,7 +169,7 @@
 			-webkit-clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 			clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 
-			@media (max-width: 992px) {
+			@media (max-width: 900px) {
 				background: transparent;
 				clip-path: none;
 				margin-top: 30px;
@@ -209,7 +209,22 @@
 				right: -120px;
 			}
 		}
-		@media (max-width: 992px) {
+		@media (max-width: 995px) {
+			clip-path: polygon(65% 0, 100% 0, 100% 100%, 45% 100%);
+		}
+		@media (max-width: 925px) {
+			clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
+		}
+		@media (max-width: 900px) {
+			display: none;
+		}
+	}
+
+
+	.dots-1 {
+		padding : 0 0 0 em(135, 24);
+		font-size: calc(0px + 24 * (100vw - 375px) / (1440 - 375));
+		@media (max-width: 900px) {
 			display: none;
 		}
 	}
@@ -229,13 +244,7 @@
 		color: $default-color;
 	}
 
-	.tel {
-		font-size: calc(18px + 6 * (100vw - 375px) / (1440 - 375));
-	}
 
-	.time {
-		font-size: calc(14px + 4 * (100vw - 375px) / (1440 - 375));
-	}
 
 	@media (max-width: 768px) {
 		&__item a,
@@ -246,31 +255,10 @@
 	}
 }
 
-.dots {
-	display: flex;
-	margin-right: rem(60);
-	gap: rem(15);
-	font-size: calc(0px + 24 * (100vw - 375px) / (1440 - 375));
-	padding: 0 0 0 em(135, 24);
-	@media (max-width: 992px) {
-		display: none;
-	}
+.tel {
+	font-size: calc(18px + 6 * (100vw - 375px) / (1440 - 375));
+}
 
-	.dot {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		background-color: $default-color;
-		cursor: pointer;
-		transition: background .3s ease-in-out;
-
-		&:hover {
-			background: #5DCCB8;
-		}
-	}
-
-	.active {
-		background: $orange-color;
-	}
+.time {
+	font-size: calc(14px + 4 * (100vw - 375px) / (1440 - 375));
 }

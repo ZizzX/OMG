@@ -29,6 +29,9 @@
     right: clamp(51px, 4vw, 150px);
     top: 0;
     //top: clamp(-50px, 20vh, -80px);
+    @media (max-width: 980px) {
+      display : none;
+    }
   }
 
   &-wrapper {

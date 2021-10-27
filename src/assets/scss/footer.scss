@@ -1,0 +1,41 @@
+@import "utils/_smart-grid";
+@import "utils/mixins";
+@import "utils/vars";
+
+.footer {
+	color: $primary-color;
+	padding : 25px 0;
+	max-width: 1000px;
+	margin : 0 auto;
+
+	.row {
+		padding : 0 16px;
+		justify-content : space-between;
+		flex-wrap: nowrap;
+		column-gap : 39px;
+
+		@media (max-width: 868px) {
+			& > * {
+				flex: 1;
+			}
+		}
+	}
+
+	.contacts {
+		display : flex;
+		align-items : center;
+		column-gap: 60px;
+		row-gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.time {
+		font-size : clamp(14px, 2vw, 24px);
+	}
+
+	.contacts-item {
+		display : flex;
+		align-items : center;
+		gap: clamp(7px, 1vw, 22px);
+	}
+}

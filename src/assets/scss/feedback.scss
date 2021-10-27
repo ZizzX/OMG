@@ -3,113 +3,161 @@
 @import "utils/vars";
 
 .feedback {
-  background: #1E927E;
-  padding: 100px clamp(6%, 10vw, 108px) 88px;
-  overflow: hidden;
-  position: relative;
+	background : #1E927E;
+	padding    : 100px clamp(6%, 10vw, 108px) 88px;
+	overflow   : hidden;
+	position   : relative;
 
-  @media (max-width: 768px) {
-    padding: 68px clamp(6%, 2vw, 108px) 57px;
-  }
+	.circle {
+		position      : absolute;
+		top           : -45px;
+		left          : 143px;
+		width         : 90px;
+		height        : 90px;
+		border-radius : 100%;
+		background    : $yellow-color;
 
-  .tns-ovh {
-    overflow-x: clip;
-    overflow-y: visible;
-  }
+		&::before {
+			content       : "";
+			width         : 22px;
+			height        : 22px;
+			display       : inline-block;
+			background    : $orange-color;
+			position      : absolute;
+			bottom        : -14px;
+			left          : -7px;
+			border-radius : 100%;
+		}
 
-  .title {
-    text-align: center;
-    margin-bottom: 100px;
-  }
+		@media (max-width : 668px) {
+			display : none;
+		}
+	}
 
-  &__wrapper {
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
+	@media (max-width : 768px) {
+		padding : 68px clamp(6%, 2vw, 108px) 57px;
+	}
 
-  &__item {
-    position: relative;
+	.tns-ovh {
+		overflow-x : clip;
+		overflow-y : visible;
+	}
 
-    border: 1px solid #00B09C;
-    max-width: 408px;
-    width: 100%;
-    min-width: 330px;
+	.title {
+		text-align    : center;
+		margin-bottom : 100px;
+	}
 
-    padding: 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
+	&__wrapper {
+		justify-content : center;
+		flex-wrap       : nowrap;
+	}
 
-    &.tns-slide-active {
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-      }
+	&__item {
+		position  : relative;
 
-      &:nth-of-type(1)::after {
-        background: url("/assets/img/feedback/vector1.svg") center no-repeat;
-      }
+		border    : 1px solid #00B09C;
+		max-width : 408px;
+		width     : 100%;
+		min-width : 330px;
 
-      &:nth-of-type(2)::after {
-        background: url("/assets/img/feedback/vector2.svg") center no-repeat;
-      }
+		padding   : 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
 
-      &:nth-of-type(3)::after {
-        background: url("/assets/img/feedback/vector3.svg") center no-repeat;
-      }
-    }
-  }
+		&.tns-slide-active {
+			&::after {
+				content  : "";
+				position : absolute;
+				display  : block;
+				top      : 0;
+				left     : 0;
+				bottom   : 0;
+				right    : 0;
+			}
 
-  &__img {
-    position: absolute;
-    z-index: 5;
-    top: -26px;
-    right: 26px;
+			&:nth-of-type(1)::after {
+				background : url("/assets/img/feedback/vector1.svg") center no-repeat;
+			}
 
-    width: 93px;
-    height: 93px;
-    border-radius: 100%;
-    overflow: hidden;
+			&:nth-of-type(2)::after {
+				background : url("/assets/img/feedback/vector2.svg") center no-repeat;
+			}
 
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
+			&:nth-of-type(n + 2) .feedback__img::before {
+				top   : -16px;
+				right : -6px;
+			}
 
-  &__name {
-    margin-bottom: 5px;
-  }
+			&:nth-of-type(2n + 1) .feedback__img::before {
+				top : 63px;
+				right  : -5px;
+			}
 
-  &__stars {
-    margin-bottom: 25px;
-  }
-  &__star.active path {
-    fill: $yellow-color;
-  }
+			&:nth-of-type(3)::after {
+				background : url("/assets/img/feedback/vector3.svg") center no-repeat;
+			}
+		}
+	}
+
+	&__img {
+		position      : absolute;
+		z-index       : 5;
+		top           : -26px;
+		right         : 26px;
+
+		width         : 93px;
+		height        : 93px;
+		border-radius : 100%;
+		//overflow: hidden;
+		&::before {
+			content       : "";
+			position      : absolute;
+			width         : 24px;
+			height        : 24px;
+			background    : $yellow-color;
+			border-radius : 100%;
+		}
+
+		& > img {
+			width           : 100%;
+			height          : 100%;
+			border-radius   : 100%;
+			object-fit      : cover;
+			object-position : center;
+		}
+	}
+
+	&__name {
+		margin-bottom : 5px;
+	}
+
+	&__stars {
+		margin-bottom : 25px;
+	}
+
+	&__star.active path {
+		fill : $yellow-color;
+	}
 
 
-  .navContainer {
-    //position: relative;
-    position: inherit;
-    height: 100%;
-    width: 100%;
-  }
+	.navContainer {
+		//position: relative;
+		position : inherit;
+		height   : 100%;
+		width    : 100%;
+	}
 
-  .prev-button,
-  .next-button {
-    cursor: pointer;
-    position: absolute;
-    z-index: 10;
-  }
-  .prev-button {
-    left: -20px;
-  }
-  .next-button {
-    right: -20px;
-  }
+	.prev-button,
+	.next-button {
+		cursor   : pointer;
+		position : absolute;
+		z-index  : 10;
+	}
+
+	.prev-button {
+		left : -20px;
+	}
+
+	.next-button {
+		right : -20px;
+	}
 }
