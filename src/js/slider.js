@@ -16,7 +16,8 @@ const slider = tns( {
   autoplay: true,
   animateIn: "zoom-in",
   animateOut: "fade-out",
-  center: true,
+  autoHeight: true,
+  
 } );
 
 const sliderBottom = tns( {
@@ -26,18 +27,45 @@ const sliderBottom = tns( {
   controls: false,
   speed: 300,
   swipeAngle: true,
-  touch: false,
+  touch: true,
   navContainer: ".dots-2",
   fixedWidth: 950,
   autoHeight: true,
   axis: "horizontal",
   nav: dots,
   navAsThumbnails: true,
-  autoplay: false,
+  autoplay: true,
   autoplayTimeout: 3000,
   center: true,
   autoplayButtonOutput: false,
   autoplayButton: false,
+  responsive: {
+    1024: {
+      items: 3
+    },
+    992: {
+      items: 2,
+    },
+    840: {
+      items: 2,
+      fixedWidth: 900,
+    },
+    480: {
+      fixedWidth: 980,
+    },
+    375: {
+      items: 1,
+      center: true,
+      fixedWidth: 900,
+      touched: true,
+    },
+    320: {
+      slideBy: "page",
+      center: false,
+      fixedWidth: 600,
+      touched: true,
+    }
+  }
 } );
 
 const addActiveClass = ( elem, activeClass ) => {

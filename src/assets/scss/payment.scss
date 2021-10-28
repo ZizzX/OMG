@@ -96,7 +96,7 @@
 
 	&__text {
 		max-width : 337px;
-		min-width : 290px;
+		//min-width : 290px;
 	}
 
 	&__text span {
@@ -131,7 +131,7 @@
 		font-size   : calc(16px + 0 * (100vw - 375px) / (1440 - 375));
 		width       : 100%;
 		max-width   : 385px;
-		min-width   : 280px;
+		//min-width   : 280px;
 		line-height : 1.2;
 
 		&:not(:last-of-type) {
@@ -185,6 +185,21 @@
 
 			span {
 				margin-top : 40px;
+			}
+		}
+	}
+
+	@media (max-width: 375px) {
+		&__conditions {
+			padding : 100px 15px 109px;
+			margin : 0;
+		}
+		&__repair {
+			font-size : 32px;
+
+			span {
+				margin-top : 40px;
+				font-size: 40px;
 			}
 		}
 	}

@@ -8,6 +8,10 @@
 	overflow   : hidden;
 	position   : relative;
 
+	@media (max-width: 480px) {
+		padding    : 100px 15px 80px;
+	}
+
 	.circle {
 		position      : absolute;
 		top           : -45px;
@@ -59,7 +63,7 @@
 		border     : 1px solid #00B09C;
 		max-width  : 408px;
 		width      : 100%;
-		min-width  : 330px;
+		//min-width  : 330px;
 		transition : border .3s ease-in-out;
 		cursor : pointer;
 		padding    : 70px clamp(32px, 10%, 49px) 54px clamp(30px, 10%, 59px);
@@ -100,6 +104,10 @@
 			&:nth-of-type(3)::after {
 				background : url("/assets/img/feedback/vector3.svg") center no-repeat;
 			}
+		}
+		@media (max-width: 375px) {
+			//min-width: 270px;
+			padding : 70px 15px 10px;
 		}
 	}
 

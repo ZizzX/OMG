@@ -119,4 +119,13 @@
 			}
 		}
 	}
+
+	@media (max-width : 375px) {
+		.wrapper {
+			padding-left : 13vw;
+		}
+		.about__img {
+			left: -80%;
+		}
+	}
 }

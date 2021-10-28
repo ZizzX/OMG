@@ -33,9 +33,22 @@ const feedbackSlider = tns( {
     },
     840: {
       items: 2,
+      fixedWidth: 408,
+    },
+    480: {
+      fixedWidth: 350,
     },
     375: {
-      items: 1
+      items: 1,
+      center: true,
+      fixedWidth: 320,
+      touched: true,
+    },
+    320: {
+      slideBy: "page",
+      center: false,
+      fixedWidth: 270,
+      touched: true,
     }
   }
 } );
