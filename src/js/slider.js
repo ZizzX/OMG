@@ -33,7 +33,6 @@ const sliderBottom = tns( {
   autoHeight: true,
   axis: "horizontal",
   nav: dots,
-  navAsThumbnails: true,
   autoplay: true,
   autoplayTimeout: 3000,
   center: true,
