@@ -11,7 +11,7 @@ const feedbackSlider = tns( {
   autoplay: true,
   autoplayTimeout: 3000,
   autoplayButtonOutput: false,
-  autoplayHoverPause: true,
+  autoplayHoverPause: false,
   slideBy: 1,
   touch: true,
   animateIn: "tns-",
@@ -24,6 +24,7 @@ const feedbackSlider = tns( {
   nextButton: "#nextButton",
   hasControls: true,
   controlsPosition: "bottom",
+  mouseDrag: true,
   responsive: {
     1024: {
       items: 3
