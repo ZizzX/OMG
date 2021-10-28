@@ -45,6 +45,10 @@
     margin-left: auto;
     margin-bottom: 55px;
 
+    @media (max-width: 420px) {
+      padding : 0 15px;
+      font-size : 1.7rem;
+    }
     @media (max-width: 375px) {
       font-size : 1.5rem;
     }
@@ -99,7 +103,8 @@
     background: $primary-color url("/assets/img/master/bg.png") 10% center/cover no-repeat;
   }
 
-  @media (max-width: $phoneWidth) {
+  @media (max-width: 425px) {
+    padding-top : 50px;
     &::after {
       left: -75%;
     }

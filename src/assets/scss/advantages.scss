@@ -193,6 +193,11 @@
 		padding: 69px 15px 137px;
 	}
 	@media (max-width: 401px) {
-		padding: 69px 0px 137px;
+		.row {
+			column-gap: 0;
+		}
+	}
+	@media (max-width: 425px) {
+		padding : 50px;
 	}
 }
