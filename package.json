@@ -78,6 +78,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "tiny-slider": "^2.9.3"
+    "tiny-slider": "^2.9.4"
   }
 }
